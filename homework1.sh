@@ -2,7 +2,7 @@
 m=`ls /sys/class/net`
 for i in $m
 do
-h=`ip a|grep $i$|grep inet|awk'{print $2}'`
+h=`ip a|grep $i$|grep inet|awk '{print $2}'`
 o=`ip ro|grep default|awk '{print $1}'`
 l=`ip ro|grep default|awk '{print $5}'`
 if [ "$l" == "$i" ]; then
